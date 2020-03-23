@@ -7,8 +7,8 @@ with open("README.md", "r") as f:
 setuptools.setup(
     name="game"
     version="0.0.1",
-    author="your name",
-    author_email="your@email.com",
+    author="Cody",
+    author_email="",
     url="https://github.com/yourusername/game",
     description="what does game do?",
     long_description=long_description,
@@ -19,4 +19,3 @@ setuptools.setup(
     tests_require=['pytest'],
     python_requires='>=3.6',
 )
-
