@@ -1,1 +1,1 @@
-web: gunicorn game:hello
+web: gunicorn "game:create_app()"
