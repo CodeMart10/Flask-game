@@ -12,8 +12,7 @@ def create_app(test_config=None):
         app.config.from_mapping(test_config)
 
 
-    @app.route('/')
-    def index():
-        return 'Flask Heroku Demo'
+    from . import engine
+    app.register_blueprint(engine.bp)
 
     return app
