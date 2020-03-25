@@ -2,12 +2,6 @@ from flask import (Blueprint, render_template, redirect, url_for, request, sessi
 
 bp = Blueprint('engine', __name__)
 
-#@bp.route('/index')
-#def engine():
-#    name = session.get(username)
-#    return render_template('index.html')
-
-
 @bp.route('/', methods=('GET', 'POST'))
 def user():
     if request.method == 'POST':

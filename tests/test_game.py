@@ -6,4 +6,4 @@ def test_config():
 
 def test_index(client):
     response = client.get('/')
-    assert response.data == b'Flask Heroku Demo'
+    client.post('/', data={'username': 'test'})
