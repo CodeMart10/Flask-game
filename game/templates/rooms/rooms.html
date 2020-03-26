@@ -1,2 +1,6 @@
 {% extends 'base.html' %}
-<p>hey</p>
+<title>{% block title %}{% endblock %} - Game</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% block content %}
+<p>Ok {{ name }} the {{ character }}</p>
+{% endblock %}
