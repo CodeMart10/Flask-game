@@ -1,4 +1,4 @@
-from flask import (Blueprint, render_template, redirect, url_for, request, session)
+from flask import (Blueprint, flash, render_template, redirect, url_for, request, session)
 
 bp = Blueprint('engine', __name__)
 
@@ -11,10 +11,7 @@ def user():
         if not username:
             error = 'Username is required.'
 
-        if error is None:
-            session.clear()
-            session['username'] = username
-            return render_template('index.html', username=username)
+        return render_template('index.html', username=username)
 
         flash(error)
 

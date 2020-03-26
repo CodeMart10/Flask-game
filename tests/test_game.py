@@ -1,3 +1,4 @@
+import pytest
 from game import create_app
 
 def test_config():

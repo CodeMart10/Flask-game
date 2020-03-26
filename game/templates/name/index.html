@@ -1,0 +1,12 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Game</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% block content %}
+  <article class="post">
+    <header>
+      <div>
+        <div class="about">Hello {{ username }}</div>
+        <a class="action" href="{{ url_for('rooms') }}">Enter</a>
+      </div>
+  </article>
+{% endblock %}
