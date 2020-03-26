@@ -12,16 +12,16 @@ def user():
         if not username:
             error = 'Username is required.'
 
-        return render_template('rooms/index.html', username=username)
+        return render_template('name/username.html', username=username)
 
         flash(error)
 
     return render_template('name/username.html')
 
 @bp.route('/engine/<character>')
-def char(character, name):
+def char(character):
     if character == 'Tank':
-        return render_template('rooms/rooms.html', character=character, name=name)
+        return render_template('rooms/rooms.html', character=character)
     if character == 'Knight':
         return render_template('rooms/rooms.html', character=character)
     if character == 'Assassin':

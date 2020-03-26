@@ -1,13 +1,31 @@
 {% extends 'base.html' %}
 
-{% block header %}
-  <h1>{% block title %}Please provide me with your name{% endblock %}</h1>
-{% endblock %}
-
 {% block content %}
+{% if not username %}
+<h1>Please provide me with your name</h1>
   <form method="post">
     <label for="username">Name</label>
     <input name="username" required>
     <input type="submit" value="enter">
   </form>
+{% endif %}
+
+  {% if username %}
+  <article class="post">
+    <header>
+      <div>
+        <div class="about">Hello <strong>{{ username }}</strong> welcome to my game.
+        In this Game your goal is to survive my completely unfair choose
+        your own adventure.</div>
+
+        <p>now choose your awesome and unique character!</p>
+        <ul>
+          <li><a href="{{ url_for('engine.char', character='Tank') }}" >Tank</a></li>
+          <li><a href="{{ url_for('engine.char', character='Knight') }}" >Knight</a></li>
+          <li><a href="{{ url_for('engine.char', character='Assassin') }}" >Assassin</a></li>
+        </ul>
+
+      </div>
+  </article>
+  {% endif %}
 {% endblock %}

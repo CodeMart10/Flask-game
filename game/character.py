@@ -3,7 +3,7 @@ tank = {
     'speed': 25
 }
 
-allaround = {
+knight = {
     'health': 100,
     'speed': 50
 }
