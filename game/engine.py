@@ -11,8 +11,8 @@ def user():
         if not username:
             error = 'Username is required.'
 
-        return render_template('index.html', username=username)
+        return render_template('rooms/index.html', username=username)
 
         flash(error)
 
-    return render_template('username.html')
+    return render_template('name/username.html')
