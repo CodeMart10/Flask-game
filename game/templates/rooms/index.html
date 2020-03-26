@@ -6,10 +6,21 @@
   <article class="post">
     <header>
       <div>
-        <div class="about">Hello {{ username }} welcome to my game. In this Game
-        your goal is to survive my completely unfair choose
+        <div class="about">Hello {{ username }} welcome to my game.
+        In this Game your goal is to survive my completely unfair choose
         your own adventure.</div>
-        
+
+        <p>choose your character!</p>
+        <ul>
+          <li><a href="{{ url_for('engine.char', character='Tank') }}" >Tank</a></li>
+          <li><a href="{{ url_for('engine.char', character='Knight') }}" >Knight</a></li>
+          <li><a href="{{ url_for('engine.char', character='Assassin') }}" >Assassin</a></li>
+        </ul>
+
+
+
+
+
 
       </div>
   </article>
