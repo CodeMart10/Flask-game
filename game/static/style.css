@@ -1,0 +1,10 @@
+.game {
+  background-color: Gray;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: #111111;
+  background-color: Tomato;
+}
