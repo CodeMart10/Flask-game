@@ -26,3 +26,13 @@ def char(character):
         return render_template('rooms/rooms.html', character=character)
     if character == 'Assassin':
         return render_template('rooms/rooms.html', character=character)
+
+
+@bp.route('/rooms/rooms')
+def room():
+    if request.method == 'POST':
+        start = request.form['choice']
+        error = None
+
+    if not start:
+        error = 'pls pick one'
