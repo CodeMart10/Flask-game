@@ -8,3 +8,6 @@ def test_config():
 def test_index(client):
     response = client.get('/')
     client.post('/', data={'username': 'test'})
+
+
+## write more testsssss

@@ -2,16 +2,20 @@
 
 {% block content %}
 {% if not username %}
+<article class="game">
+
 <h1>Please provide me with your name</h1>
   <form method="post">
     <label for="username">Name</label>
     <input name="username" required>
     <input type="submit" value="enter">
   </form>
+
+  </article>
 {% endif %}
 
   {% if username %}
-  <article class="post">
+  <article class="game">
     <header>
       <div>
         <div class="about">Hello <strong>{{ username }}</strong> welcome to my game.
